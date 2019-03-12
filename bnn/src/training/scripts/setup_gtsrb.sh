@@ -37,8 +37,8 @@
 set -e
 
 echo "Downloading GTSRB dataset and python code... "
-wget -O data/GTSRB-Training_fixed.zip http://benchmark.ini.rub.de/Dataset/GTSRB-Training_fixed.zip
-wget -O data/GTSRB_Python_code.zip http://benchmark.ini.rub.de/Dataset/GTSRB_Python_code.zip
+wget -c -O data/GTSRB-Training_fixed.zip http://benchmark.ini.rub.de/Dataset/GTSRB-Training_fixed.zip
+wget -c -O data/GTSRB_Python_code.zip http://benchmark.ini.rub.de/Dataset/GTSRB_Python_code.zip
 echo "Downloading complete!"
 
 echo "Extracting archives... "

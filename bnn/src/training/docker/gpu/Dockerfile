@@ -59,12 +59,16 @@ RUN echo "[global]" >> /root/.theanorc &&\
     echo "device = gpu" >> /root/.theanorc &&\ 
     echo "openmp = True" >> /root/.theanorc &&\ 
     echo "openmp_elemwise_minsize = 200000" >> /root/.theanorc &&\
+    echo "warn.round = False" &&\
     echo "" >> /root/.theanorc &&\
     echo "[nvcc]" >> /root/.theanorc &&\
     echo "fastmath = True" >> /root/.theanorc &&\
     echo "" >> /root/.theanorc &&\
     echo "[blas]" >> /root/.theanorc &&\
-    echo "ldflags = -lopenblas" >> /root/.theanorc
+    echo "ldflags = -lopenblas" >> /root/.theanorc &&\
+    echo "" >> /root/.theanorc &&\
+    echo "[lib]" >> /root/.theanorc &&\
+    echo "cnmem = 1" >> /root/.theanorc
 
 # Make script to download datasets 
 RUN echo '#!/bin/bash' >> /root/download_cifar10_mnist.sh &&\
